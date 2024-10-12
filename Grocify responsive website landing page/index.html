@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src=
+"https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js">
+      </script>
+</head>
+<body>
+    <div class="container min-h-screen min-w-screen bg-[url('images/image.png')] bg-center bg-cover px-4 md:px-28 py-2 md:py-5 relative">
+        <nav class="flex items-center justify-between">
+            <img src="./images/logo.png" class="w-40 cursor-pointer" alt="">
+            <ul class="nav-links duration-500 md:static 
+            absolute md:min-h-fit min-h-[60vh] 
+            right-0 top-[-100%] md:w-auto  w-auto 
+            flex items-center px-5 justify-center flex-col md:flex-row bg-[#0f0a19ad]">
+                <li class="list-none inline-block px-5"><a href="#" class="no-underline text-white px-2">Home</a></li>
+                <li class="list-none inline-block px-5"><a href="#" class="no-underline text-white px-2">About</a></li>
+                <li class="list-none inline-block px-5"><a href="#" class="no-underline text-white px-2">Features</a></li>
+                <li class="list-none inline-block px-5"><a href="#" class="no-underline text-white px-2">Contact</a></li>
+            </ul>
+            <img src="./images/cart.png" class="w-8 cursor-pointer" alt="">
+            <div class="flex items-center">
+                <ion-icon onclick="onToggleMenu(this)" 
+                name="menu" class="text-3xl cursor-pointer md:hidden text-white">
+                  </ion-icon>
+            </div>
+        </nav>
+
+        <div class="text-white mt-20 md:mt-48 max-w-xl">
+            <h1 class="md:text-6xl text-4xl font-semibold leading-normal">Groceries <br> delivery in <span class="font-light">15 mins</span></h1>
+            <p>Grocify offer a wide range of products, including fresh products, meats, dairy, baked goods and non-perishable items.</p>
+
+            <div class="mt-10">
+                <a href="#" class="bg-yellow-600 rounded-3xl py-1 md:py-3 px-4 md:px-8 font-medium inline-block mr-4 hover:bg-transparent hover:border-yellow-300 md:text-black lg:text-black hover:text-white duration-300 hover:border border border-transparent">Order Now</a>
+                <a class="block md:inline-block">Download App <span class="text-lg inline-block rotate-90">&#10148;</span></a>
+            </div>
+        </div>
+        <img src="./images/grocery-image.png" class="w-full xl:w-1/2 xl:absolute bottom-0 right-20">
+    </div>
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e) {
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[6%]')
+        }
+    </script>
+</body>
+</html>
